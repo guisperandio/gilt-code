@@ -6,9 +6,9 @@ The json file is on src/assets/db
 
 ## To run the project
 
-clone the git
-run npm install
-ng serve --open
+clone the git<br/>
+run npm install<br/>
+ng serve --open<br/>
 
 ## Development server
 
