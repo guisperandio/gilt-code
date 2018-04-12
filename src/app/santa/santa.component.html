@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4" *ngFor="let user of users">
+      <div class="card-people card" id="{{ user.guid }}" >
+        <div class="info-people card-body">
+          <h5 class="people-name card-title"><i class="far fa-user"></i> {{ user.name.first }} {{ user.name.last }}</h5>
+          <span class="people-email"><i class="far fa-envelope"></i> {{ user.email }}</span>
+          <span class="people-phone"><i class="fas fa-phone"></i> {{ user.phone }}</span>
+        </div>
+        <div class="santa-card no-display card-body" *ngIf="showSanta">
+          <div class="info-people">
+            <h5 class="people-name"><i class="fas fa-gift"></i> {{ user.giveGift.name.first }} {{ user.giveGift.name.last }}</h5>
+            <span class="people-email"><i class="far fa-envelope"></i> {{ user.giveGift.email }} </span>
+            <span class="people-phone"><i class="fas fa-phone"></i> {{ user.giveGift.phone }} </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" (click)="onShowSanta($event)">{{ message }}</button>
+  </div>
+</div>
